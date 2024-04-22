@@ -9,11 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tensorflow/tfjs-node": "^1.7.0",
+    "@tensorflow/tfjs-node": "2.0.0",
+    "@tensorflow/tfjs-core": "2.0.0",
     "axios": "^1.6.8",
     "bluebird": "^3.7.2",
-    "canvas": "^2.11.2",
     "face-api.js": "^0.22.2",
     "fs": "^0.0.1-security"
+  },
+  "overrides": {
+    "@tensorflow/tfjs-node": "2.0.0",
+    "@tensorflow/tfjs-core":"2.0.0"
   }
 }
