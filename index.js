@@ -64,8 +64,8 @@ faceapi.nets.faceRecognitionNet.loadFromDisk(weightsLoc)
                 const bestMatch = faceMatcher.findBestMatch(incomingFace.descriptor)
                 if (bestMatch?._label !== personLabel) {
                     console.log("NOT YOU! INTRUDER! SUSPENDING YOUR ACCESS!");
+                    const imgurUrl = "https://api.imgur.com/3/image";
                     const axiosImgur = axios.create({
-                        baseURL: "https://api.imgur.com/3/image",
                         headers: {'Authorization': `Client-ID ${process.env.IMGUR_CLIENT_ID}`}
                     });
                     const form = new FormData();
